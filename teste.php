@@ -8,12 +8,12 @@
     </head>
     <body>
 
-<form action="" method="post">
+<form action="teste.php" method="post">
 Pesquisa: <input type="text" name="pesquisa"><br>
 <input type="submit">
 </form>  <br/><br/><br/>
 
-<!-- <a href="/simple_html_dom-master">Voltar</a> -->
+<a href="/simple_html_dom-master">Voltar</a>
 
 <table border="0" width="100%">
 		<tr>
@@ -27,8 +27,6 @@ Pesquisa: <input type="text" name="pesquisa"><br>
 <?php
 ini_set( 'display_errors', 0 );
 require 'simple_html_dom.php';
-
-preg_replace(' ', '%20%', $_POST["pesquisa"]);
 
 $html = file_get_html('https://www.youtube.com/results?search_query='.$_POST["pesquisa"]);;
 
